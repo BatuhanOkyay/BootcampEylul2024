@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs Inline</title>
+</head>
+
+<body>
+    <!-- h1 , p , div  gibi elementler block elementtir bulundugu satiri kendine rezerve eder sagi bos dahi olsa yeni bir element kabul etmez  -->
+    <p>adim</p>
+    <p>ali</p>
+
+    <hr>
+    <!-- span , img , a , strong  , em gibi elementler inline elementtir satiri paylasirlar yan yana siralanirlar sanki bir cumlenin harfleri gibi davranirlar -->
+    <span>adim</span>
+    <span>veli</span>
+
+    <hr>
+
+    bu resim
+    <img src="//picsum.photos/id/144/1000" alt="bir resim" height="64">
+    <em>Batuhana</em> gelsin
+
+    <hr>
+
+    <!-- cmd+shift+p yapip emmet yazip ilk gelene basiyoruz sonrasinda sectigimiz seyi ne ile cevrelemek istiyorsak onu yaziyoruz -->
+    <!-- https yazmak istemiyorsak // su sekilde yapabiliriz -->
+    <p>Lorem <a href="//kod.fun">ipsum</a> <strong>dolor</strong> sit amet.</p>
+
+    <hr>
+
+    <!-- sub alt sup ise ust demek -->
+    <p>
+        Alan: 100km<sup>2</sup>
+    </p>
+
+    <p>
+        Bol bol <strong><em>H<sub>2</sub>O </em></strong>iciniz
+    </p>
+
+    <!-- NOT html taglarinde son acilan tag ilk kapanir -->
+    <!-- Yanlis kullanim ornegi -->
+    <!-- <span><strong>abc</span></strong> -->
+
+    <!-- Dogru kullanim su sekilde -->
+    <span><strong>abc</strong></span>
+</body>
+
+</html>

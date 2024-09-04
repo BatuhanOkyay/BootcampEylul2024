@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablolar</title>
+</head>
+
+<body>
+    <!-- tablolarin elamanlari table icerisinde yer almak zorundadir -->
+    <!-- tr table row anlaminda kullanilir satir olarak kullanilir -->
+    <!-- td table data anlaminda kullanilir sutun olarak kullanilir -->
+    <!-- th table headin tablo basligi olarak kullanilir -->
+    <h2>Memleketler</h2>
+    <!-- border attribute yerine css kullanilmali suan icin gecici bu sekilde yaptik -->
+    <table border="1">
+        <tr>
+            <td rowspan="4">
+                Turkiye
+            </td>
+            <th>
+                Plaka
+            </th>
+            <th>
+                Sehir
+            </th>
+            <th>
+                Neyiyle Meshur
+            </th>
+            <th>
+                Bolgesi
+            </th>
+            <th>
+                Denizi Var mi?
+            </th>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>Samsun</td>
+            <td>Bafra Pidesi</td>
+            <td>Karadeniz Bolgesi</td>
+            <td>Evet</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>Izmir</td>
+            <td>Boyoz</td>
+            <td>Ege</td>
+            <td>Evet</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>Tokat</td>
+            <td>Yaprak Sarmasi, Uzum</td>
+            <td>Karadeniz</td>
+            <td>Hayir</td>
+        </tr>
+    </table>
+
+
+    <!-- baslik icin thead 
+     icerik icin tbody
+     dipnot icin tfoot kullaniliyor -->
+    <h2>Filmler</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Film Adi</th>
+                <th>Yil</th>
+                <th>Imdb Puan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kaybedenler Kulubu</td>
+                <td>2011</td>
+                <td>7,5</td>
+            </tr>
+            <tr>
+                <td>The GodFather</td>
+                <td>1972</td>
+                <td>9,2</td>
+            </tr>
+            <tr>
+                <td>Babam ve Oglum</td>
+                <td>2005</td>
+                <td>8,2</td>
+            </tr>
+            <tr>
+                <td>Cars</td>
+                <td>2006</td>
+                <td>7,2</td>
+            </tr>
+        </tbody>
+        <!-- span yayilma anlamina gelir 
+         colspan sutun yayilmasi anlamina gelir
+         rowspan satir yayilmasi anlamina gelir -->
+        <tfoot>
+            <tr>
+                <th colspan="2">Ortalama Puan</th>
+                <th>8,025</th>
+            </tr>
+        </tfoot>        
+    </table>
+</body>
+</html>
