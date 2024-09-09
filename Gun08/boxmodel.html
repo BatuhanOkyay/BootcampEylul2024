@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+             /* buradaki yildiz tum elementlere uygula demek anlamina gelir */
+             /* box-sizing dersek verdigimiz yukseklik toplam yukseklik olur ama eger bunu vermezsek o zaman hem height hem padding hem border toplami olur */
+            box-sizing: border-box;
+        }
+        .kutu1 {
+            background: yellow;
+            border: 10px solid green;
+            padding: 20px ;
+            height: 200px;
+            width: 100%; /* burasi default olarak boyledir */
+            margin-top: 20px; /* margin top ve margin bottom ayni oldugu icin aradaki mesafe ayni kaliyor eger birisi buyuk olursa dikkate alinan o olur */
+        }
+        header{
+            background: violet;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px;
+            border: 15px dashed orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- header div gibidir ama sayfanin ustune koyulan seylere denir -->
+    <header>HEADER HEADER HEADER</header>
+    <div class="kutu1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore obcaecati eaque veniam molestias doloribus ullam debitis esse possimus iusto reprehenderit eius harum non, iure repellat et corporis optio impedit.
+    </div>
+</body>
+</html>
