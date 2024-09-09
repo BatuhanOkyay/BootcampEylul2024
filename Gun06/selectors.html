@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        h1{
+            /* harflerı buyutmek ıcın kullanılır */
+            text-transform: uppercase; 
+            /* Aralarını acmak ıcın kullanılır */
+            letter-spacing: 5px;
+        }
+        /* class . ile belirlenir */
+        .favori{
+            border-left: 10px solid #007AFF;
+        }
+
+        /* id kullanımı bu sekılde */
+        #memleket {
+            text-align: center;
+        }
+
+        #memleket::after {
+            content: "(OTOPARK)";
+            font-weight: bold;
+        }
+
+        /* immediate child dogrudan cocuk */
+        div>p {
+            margin: 0 60px;
+            text-align: justify;
+            font-size: 80%;
+        }
+        /* arada bosluk olursa cocugunun cocugunu da ekler anlamında dıv ıcınde sectıon onun ıcınde p  */
+        div > p {
+            font-family: Comic Sans Ms;
+        }
+
+        /* gruplamam nasıl yapılır */
+        h1 , h2 {
+            background-color: black;
+            color: white;
+        }
+
+        /* attirubuate selector öznitelik */
+        [title] {
+            background-color: yellow;
+        }
+        li[title] {
+            font-style: italic;
+        }
+        /* h2 den sonra gelen p için kullanılır */
+        h2+p {
+            text-indent: 40px;
+        }
+        /* tek olanlara bişey yap anlamında ya odd kullanılır yada 2n+1 kullanılır*/
+        li:nth-child(odd) {
+            background-color: gainsboro;
+        }
+
+        /* sadece 6 secmek ıstersek yaparız */
+        li:nth-child(6){
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            font-style: italic;
+            font-family: Arıal;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px red;
+            color: cyan;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- p yerıne neden div kullanıyoruza bır ornek olarak burası verıldi -->
+    <div style="border: 10px dashed red;">
+        <h1>Türkiye</h1>
+        <h2>Kütahya</h2>
+    </div>
+    <p>
+        Kütahya (Latince: Cotyaeum), Ege Bölgesi'nde yer alan Kütahya ilinin merkezi olan şehirdir. Kütahya bölgesi,
+        kuzey ve batıdaki yüksek dağ sırtlarında doruğa ulaşan tarım arazileri ile geniş bir yamaç alanına sahiptir.
+    </p>
+    <p>
+        Kuruluş tarihi kesin olarak tespit edilememekle beraber, tarihi MÖ 3000 yıllarına uzanmaktadır. Eski kaynaklara
+        göre, Kütahya'nın antik çağlardaki adı Kotiaeon, Cotiaeum ve Koti şeklinde geçmektedir. İl topraklarına yerleşen
+        en eski halk Friglerdir. 
+    </p>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, cumque commodi perspiciatis nulla fugiat incidunt. Tempore voluptatibus amet similique, illum aspernatur sed. Distinctio odit ipsam delectus qui, quos officia repellendus architecto sequi dolorem ullam ex accusantium ab inventore sint voluptas pariatur rerum! Cumque, unde. Molestiae nam labore natus? Exercitationem, quaerat?
+        </p>
+        <section>
+            <!-- burayı etkılemeyecek div ıcınde olmasına ragmen -->
+            <p>Kütahya <span title="Kalite">Porselen</span> Sunar..</p>
+        </section>
+    </div>
+    <h3>İlçeleri</h3>
+    <ul>
+        <li>Merkez</li>
+        <li>Altıntaş</li>
+        <li>Aslanapa</li>
+        <li title="Dikkat antik kent içerir">Çavdarhisar</li>
+        <li class="favori">Domaniç</li>
+        <li>Dumlupınar</li>
+        <li class="favori">Emet</li>
+        <li>Gediz</li>
+        <li>Hisarlar</li>
+        <li>Pazarlar</li>
+        <li>Simav</li>
+        <li>Şaphane</li>
+        <!-- id sadece bir tane olur birden fazla aynı id verilmez -->
+        <li id="memleket" class="favori" >Tavşanlı</li>
+    </ul>
+</body>
+
+</html>
