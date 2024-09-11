@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sozde Elemen</title>
+    <style>
+        html {
+            font-size: 24px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        /* her paragrafin ilk harfdine ayri muamela yap */
+        p::first-letter {
+            font-size: 300%;
+            float: left;
+            line-height: .75;
+            font-weight: bold;
+        }
+
+        /* ilk satir olarak secmek istersek */
+        p::first-line {
+            text-decoration: underline;
+        }
+
+        p::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        main {
+
+            max-width: 600px;
+            margin: 60px auto 200px;
+            background-color: #A9C9FF;
+            background-image: linear-gradient(180deg, #A9C9FF 0% #FFBBEC 100%);
+            padding: 36px;
+            border-radius: 10px;
+            box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+        }
+
+        @media (max-width: 720px){
+            main {
+                margin: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>Borem ipsum dolor sit amet consectetur adipisicing elit. Molestias numquam explicabo sapiente aliquam
+            maiores, molestiae porro. Autem repudiandae placeat minus vero, voluptatibus iusto assumenda labore
+            explicabo repellat quidem at nesciunt?</p>
+        <p>Aste impedit itaque odit nam aspernatur nihil labore, consequuntur facere quis, voluptatum eligendi harum
+            maiores molestiae eum vero assumenda dolorem dolor nostrum repellat consequatur repudiandae deleniti error
+            hic? Doloribus, repudiandae.</p>
+        <p>Tolorum fuga ipsam aut voluptas quae consequatur laboriosam modi sed, nobis laudantium sint pariatur aliquam
+            quos reprehenderit eos doloremque. Eos vitae dolorum reiciendis dolorem quidem nihil fugit consectetur
+            veniam quod!</p>
+        <p>Unimi dolorum accusantium eos voluptates ab vero fugiat magni. Consequatur quis asperiores autem atque quos
+            cum voluptatum, unde nam delectus et dolorem! Atque, fugit illum velit officia suscipit ipsa repellendus?
+        </p>
+    </main>
+</body>
+
+</html>

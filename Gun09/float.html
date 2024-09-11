@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float ile calismak ve float temizligi</title>
+    <style>
+        .hepsi {
+            border: 5px dashed black;
+        }
+        
+        .kutu {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            margin: 10px;
+            float: right;
+        }
+
+        /* cift olanlari sola daya dedik 2n=even da denilebilir */
+        div.kutu:nth-child(2n){
+            float: left;
+        }
+        /* cozum1: float un kesilmesini istedigimiz float eden elemandan sonra bos bir dive bu sinif verilir */
+        .temizlik {
+            /* her iki yanida temizle anlaminda kullanilir hem sag hem sol */
+            clear: both;
+        }
+
+        /* MODERN COZUM sadece css cozumu */
+        /* hepsi after deyince hepsi divi icerisinde yalandan bir div koyar ve ona css verebiliriz */
+
+        .hepsi::after {
+            content: "inanmiyorum";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.hepsi>div.kutu*12>{kutu $} -->
+    <div class="hepsi">
+        <div class="kutu">kutu 1</div>
+        <div class="kutu">kutu 2</div>
+        <div class="kutu">kutu 3</div>
+        <div class="kutu">kutu 4</div>
+        <div class="kutu">kutu 5</div>
+        <div class="kutu">kutu 6</div>
+        <div class="kutu">kutu 7</div>
+        <div class="kutu">kutu 8</div>
+        <div class="kutu">kutu 9</div>
+        <div class="kutu">kutu 10</div>
+        <div class="kutu">kutu 11</div>
+        <div class="kutu">kutu 12</div>
+        <!-- <dir class="temizlik"></dir> -->
+    </div>
+</body>
+</html>
