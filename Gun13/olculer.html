@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olculer</title>
+    <style>
+        html {
+            /* 1rem i belirler */
+            font-size: 20px;
+        }
+        .cubuk1 {
+            height: 20px;
+            background-color: purple;
+            width: 96px;
+        }
+        .cubuk2 {
+            height: 20px;
+            background-color: pink;
+            /* rem html elementinin font-size na esittir tercih edilen 16px dir ama bu zorunluluk degildir  */
+            width: 6rem;
+        }
+        .cubuk3 {
+            height: 20px;
+            background-color: green;
+            /* em babasinin 6 kati anlaminda kullanilir */
+            width: 6em;
+        }
+        .cubuk2-kapsayici {
+            font-size: 10px;
+        }
+        .cubuk3-kapsayici {
+            font-size: 10px;
+        }
+        /* 1px: ekrandaki en ufak nokta (onemli aciklama mobil cihazlarda cihaza gore olcekleme saglamak icin wiewport meta tagi kullanilir ve px heaplamai 2-3 noktaya karsilik gelecek sekilde hesaplanir) */
+
+        /* 1rem: html kok elementinin font size degeridir borcok tarayicida html elementi 16 px varsayilan bir font degerine sahiptir */
+
+        /* 1em: bir elementin parentindan miras aldigi font-size ina karsilik gelir */
+        
+    </style>
+</head>
+<body>
+    <h1>Olcu Birimleri</h1>
+    <h2>genisligi 96px olan bir div</h2>
+    <div class="cubuk1"></div>
+    <h2>genisligi 6rem olan bir div</h2>
+    <div class="cubuk2-kapsayici">
+        <div class="cubuk2"></div>
+    </div>
+    <div class="cubuk3-kapsayici">
+        <h2>genisligi 6em olan bir div</h2>
+        <div class="cubuk3"></div>
+    </div>
+    <hr>
+    <style>
+        .soru1 { font-size: 4px; }
+        .soru1-a { font-size: 1.5em; }
+        .soru1-b { font-size: 1.5em; }
+        .soru1-c { font-size: 1.5em; }
+    </style>
+    <div class="soru1">
+        <div class="soru1-a">
+            <div class="soru1-b">
+                <div class="soru1-c">
+                    <!-- bu yazinin hesaplanmis boyutu kac pixel dir -->
+                    SORU 1: Mola yaklasiyor (4x1.5x1.5x1.5)
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</body>
+</html>
