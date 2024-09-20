@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+        .tumu{
+            display: flex;
+            justify-content: space-between;
+        }
+        .tumu>div {
+            background-color: black;
+            color: white;
+        }
+        /* cocuklarin varsayilan sirasi 0 dir eksi degerler vermek negatif basa pozitif sona atar ince ayar istiyorsan hepsine vir order sayisi ata degerin ne oldugundan ziyade buyukluk kucukluk onemlidir */
+        .a {
+            order: 1;
+        }
+
+        .d {
+            order: -333;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="tumu">
+        <div class="a">adana</div>
+        <div class="b">bursa</div>
+        <div class="c">ceyhan</div>
+        <div class="d">denizli</div>
+        <div class="e">edirne</div>
+        <div class="f">fatsa</div>
+        <div class="g">gumushane</div>
+    </div>
+</body>
+</html>
