@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>javaScript Ogreniyorum</h1>
+    <p>
+        <!-- buranin icini javascript ile degistirebilirmiyiz -->  
+    </p>
+
+
+    <script>
+        //burasi javascript bolgesi
+        
+        
+        
+
+        //javascript de html dokumanuna karsilik gelen document adinda bir nesne vardir
+        //her seyin basi olarak DOM agacinin tepesinde gosterdik document  nesnesi uzerindeki tum elementlere erisebiliriz.
+
+        //sayfada ilk p elementine eris ve  icindeki metni degistir
+        //nesneleri degiskenlere tasiyabiliriz
+        let ilkParag =  document.querySelector("p");
+
+
+        //nesnelerin ozelliklerine . operatoru ile erisiriz
+        // = operetoru ile yeni degerler veririz
+        ilkParag.textContent = "Biz kimseyi yari yolda birakmadik onlar musait bir yerde indiler... - Bir kamyon arkasi sozu"
+
+        //elementlerin ozelliklerinin ozelliklerine erisip degistirebiliriz
+        ilkParag.style.color = "purple";
+
+        //DOM agacinin ilk dalllarindan biri olan body ye bu sekilde erisebiliriz
+        document.body.style.background = "linear-gradient(to right, orange, white)";
+
+
+
+
+
+        
+        //programlama
+        //komutlarin belli sirada belirli bir amac icin calistirilmasi (algoritma)
+        //komutlar insan diline yakin bir dille bilgisayara is yapmasi icin fisildamaktir
+        //alert("Hopppppp ..... palaaaa!!!");
+        //alert("Hosgeldin :)");
+        //alert metodu ingilizcedeki anlamina yakin bir sekilde bur uyari mesaji vermek icin kullanilir
+    </script>
+</body>
+</html>

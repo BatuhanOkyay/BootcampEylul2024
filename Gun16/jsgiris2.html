@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Bolgeleri</title>
+</head>
+
+<body>
+    <h1>JavaScript Giris II</h1>
+    <p>bir HTML dokumaninda javascript i 3 farkli sekilde dokumana dahil edebiliriz</p>
+
+    <!-- A. SCRIPT taglari arasinda -->
+    <script>
+        let x = 2 + 2;
+        document.write("<hr>")
+        document.write(x);
+    </script>
+
+    <!-- B. Harici dosya -->
+    <script src="kod.js"></script>
+    <hr>
+
+    <!-- inline JavaScript -->
+    <button onclick="alert('basin goge erdi mi');">BANA TIKLAMA</button>
+    <hr>
+
+    <button id="minnos" onmouseenter="document.getElementById('minnos').remove()">
+        uzerime gelmeyin burayi terk ederim</button>
+</body>
+
+</html>
