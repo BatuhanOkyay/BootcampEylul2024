@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment &Decrement</title>
+</head>
+<body>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+        let a = 1;
+        a++; // a += 1 arasindaki fark nedir   
+        ciz(a); // 2
+        
+        let b = 1;
+        ciz(b++ * 3); // 3 : b degeri kullanim sonrasi artirilir
+        ciz(b); // 2
+
+        let c = 5;
+        ciz(c++); // 5
+        ciz(c);
+
+        let d = 3;
+        ciz(d++ * d);
+
+        let e = 3;
+        ciz(++e * e);
+
+        let f = 10;
+        ciz(f-- + --f);
+
+        let g = 3;
+        yaz(++g - g--);
+        ciz(g);
+
+        let h = 4;
+        h = h++;
+        ciz(h);
+
+        let i = 7;
+        i = ++i;
+        ciz(i);
+
+        temizle();
+
+        let j = 5;
+        j  *= j++;
+        ciz(j);
+
+        let k = 0;
+        yaz(k++ - --k);
+        ciz(k);
+
+        // burada islem onceligine bakilmaksizin solda saga degerler once yerlestirilir sonrasinda islem yapilir.
+        let l = 3;
+        l = l + l * l++;
+        ciz(l);
+
+        
+        let m = 2;
+        m = m * (m + ++m);
+        ciz(m);
+
+        //mantiksal operatorler konusundan sonra bakin
+        let n = 3;
+        let sonuc = n++ == 3 || ++n == 5; // iki sonucdan biri calismali ilki true oldugu icin digerine hic bakmaz bile o sekilde devam eder.
+        yaz(sonuc);
+        yaz(n);
+        // bu notu ileride okuyun veya || operatoru soldaki degere true ise sagina hic bakmaz degerlendirmeye almaz
+
+        // ve && operatoru sol taraf false ise umudunu yitirir sagi hic degerlendirmeye almaz
+
+        let o = 40;
+        yaz(0 < 39 && ++o == 41);
+        ciz(o);
+
+
+        let p = 2;
+        if(++p == p++);
+        ciz(p);
+        // x++ once x degeri kullanilir sonra artirilir
+        // ++x once artirilir sonra artmis x degeri kullanilir
+
+
+    </script>
+</body>
+</html>
