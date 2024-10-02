@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Alan Hesabi</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1 class="mt-3">Dikdortgen Alan Hesabi</h1>
+        <div class="mb-3">
+            <label class="form-label" for="gen">Genislik</label>
+            <input class="form-control" type="number" id="gen" value="0">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="yuk">yukseklik</label>
+            <input class="form-control" type="number" id="yuk" value="0">
+        </div>
+        <div class="alert alert-info">
+            Ozellikleri girilen dikdortgenin alani: <strong>
+                <span id="sonuc">0</span>br²
+        </div>
+        </strong>
+    </div>
+
+<script>
+    //once tezgaha malzemeleri dokelim
+    const inputGen = document.getElementById("gen");
+    const inputYuk = document.getElementById("yuk");
+    const spnSonuc = document.getElementById("sonuc");
+
+    //veri nesnemizi olusturalim
+    let  dikdortgen = {
+        genislik: 0,
+        yukseklik: 0,
+        alan: function() {
+            return this.genislik * this.yukseklik;
+        }
+    }
+
+    //ihtiyac duyacagimiz fonksiyonlari tanimlayalim
+    function sonucuGuncelle(){
+        dikdortgen.genislik = inputGen.value;
+        dikdortgen.yukseklik = inputYuk.value;
+        spnSonuc.textContent = dikdortgen.alan();
+    }
+    
+
+    // event tanimlamasi ne degisince ne olsun
+    inputGen.oninput = sonucuGuncelle;
+    inputYuk.oninput = sonucuGuncelle;
+</script>
+
+</body>
+
+</html>
