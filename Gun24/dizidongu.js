@@ -1,0 +1,1 @@
+let dizi = ["betul", "seviye","gunes","at"]
